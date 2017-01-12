@@ -7,22 +7,41 @@
 //
 
 #import "AnotherViewController.h"
+#import "ViewController.h"
+#import "Consultant.h"
 
 @interface AnotherViewController ()
-
+@property(strong,nonatomic)ViewController *vc;
 @end
 
 @implementation AnotherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.vc = [[ViewController alloc]init];
+    Skills *skills = [[Skills alloc]init];
+    skills.playerCompany = @"something";
+    [self.vc iWillDoThis:skills withCompletionHandler:^(Consultant *consultant) {
+        NSLog(@"the consultant is %@",consultant.skills.playerCompany);
+    }];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(doThis) userInfo:nil repeats:YES];
+    
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)doThis{
+    if(self.vc.lovely){
+        Consultant *con = [[Consultant alloc]init];
+        Skills *skills = [[Skills alloc]init];
+        skills.playerCompany = @"Amadeus";
+        
+        con.empID = @"3223";
+        con.skills = skills;
+        self.vc.lovely(con);
+    }
+ 
 }
+
 
 /*
 #pragma mark - Navigation

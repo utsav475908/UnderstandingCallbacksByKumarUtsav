@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Consultant.h"
 
+typedef void(^Amadeus)(Consultant*);
 @interface ViewController : UIViewController
 
+@property(copy, nonatomic)Amadeus lovely;
+
+-(void)iWillDoThis:(Skills*)someSkills withCompletionHandler:(void(^)(Consultant * consultant))animations;
 
 @end
 

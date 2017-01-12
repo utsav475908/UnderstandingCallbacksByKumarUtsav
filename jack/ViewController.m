@@ -7,16 +7,18 @@
 //
 
 #import "ViewController.h"
-#import "Consultant.h"
 
-typedef void(^Amadeus)(Consultant*);
 
 @interface ViewController ()
-@property(copy, nonatomic)Amadeus lovely;
+
 @property(strong,nonatomic)NSTimer *timer;
 @end
 
 @implementation ViewController
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.timer invalidate];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +29,7 @@ typedef void(^Amadeus)(Consultant*);
     [self iWillDoThis:s withCompletionHandler:^(Consultant *consultant) {
         NSLog(@"the consultant value is %@",consultant.skills.playerCompany);
     }];
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(someEvent) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(someEvent) userInfo:nil repeats:YES];
     
     
 }
