@@ -15,6 +15,9 @@
 		185291381E27D5D1001C9272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185291361E27D5D1001C9272 /* LaunchScreen.storyboard */; };
 		185291431E27D5D1001C9272 /* jackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 185291421E27D5D1001C9272 /* jackTests.m */; };
 		1852914E1E27D5D1001C9272 /* jackUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852914D1E27D5D1001C9272 /* jackUITests.m */; };
+		1852915D1E27D5EF001C9272 /* AnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852915C1E27D5EF001C9272 /* AnotherViewController.m */; };
+		185291601E27D62E001C9272 /* Consultant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852915F1E27D62E001C9272 /* Consultant.m */; };
+		185291631E27D663001C9272 /* Skills.m in Sources */ = {isa = PBXBuildFile; fileRef = 185291621E27D663001C9272 /* Skills.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		185291491E27D5D1001C9272 /* jackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1852914D1E27D5D1001C9272 /* jackUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jackUITests.m; sourceTree = "<group>"; };
 		1852914F1E27D5D1001C9272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1852915B1E27D5EF001C9272 /* AnotherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherViewController.h; sourceTree = "<group>"; };
+		1852915C1E27D5EF001C9272 /* AnotherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherViewController.m; sourceTree = "<group>"; };
+		1852915E1E27D62E001C9272 /* Consultant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consultant.h; sourceTree = "<group>"; };
+		1852915F1E27D62E001C9272 /* Consultant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Consultant.m; sourceTree = "<group>"; };
+		185291611E27D663001C9272 /* Skills.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skills.h; sourceTree = "<group>"; };
+		185291621E27D663001C9272 /* Skills.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skills.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +112,8 @@
 			children = (
 				1852912B1E27D5D1001C9272 /* AppDelegate.h */,
 				1852912C1E27D5D1001C9272 /* AppDelegate.m */,
+				1852915B1E27D5EF001C9272 /* AnotherViewController.h */,
+				1852915C1E27D5EF001C9272 /* AnotherViewController.m */,
 				1852912E1E27D5D1001C9272 /* ViewController.h */,
 				1852912F1E27D5D1001C9272 /* ViewController.m */,
 				185291311E27D5D1001C9272 /* Main.storyboard */,
@@ -110,6 +121,8 @@
 				185291361E27D5D1001C9272 /* LaunchScreen.storyboard */,
 				185291391E27D5D1001C9272 /* Info.plist */,
 				185291281E27D5D1001C9272 /* Supporting Files */,
+				1852915E1E27D62E001C9272 /* Consultant.h */,
+				1852915F1E27D62E001C9272 /* Consultant.m */,
 			);
 			path = jack;
 			sourceTree = "<group>";
@@ -118,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				185291291E27D5D1001C9272 /* main.m */,
+				185291611E27D663001C9272 /* Skills.h */,
+				185291621E27D663001C9272 /* Skills.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -274,7 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				185291301E27D5D1001C9272 /* ViewController.m in Sources */,
+				185291631E27D663001C9272 /* Skills.m in Sources */,
 				1852912D1E27D5D1001C9272 /* AppDelegate.m in Sources */,
+				185291601E27D62E001C9272 /* Consultant.m in Sources */,
+				1852915D1E27D5EF001C9272 /* AnotherViewController.m in Sources */,
 				1852912A1E27D5D1001C9272 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
