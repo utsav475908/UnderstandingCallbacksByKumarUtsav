@@ -12,9 +12,13 @@
 
 @interface AnotherViewController ()
 @property(strong,nonatomic)ViewController *vc;
+@property(strong,nonatomic)NSTimer *timer;
 @end
 
 @implementation AnotherViewController
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.timer invalidate];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +28,7 @@
     [self.vc iWillDoThis:skills withCompletionHandler:^(Consultant *consultant) {
         NSLog(@"the consultant is %@",consultant.skills.playerCompany);
     }];
-    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(doThis) userInfo:nil repeats:YES];
+   self.timer =  [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(doThis) userInfo:nil repeats:YES];
     
     // Do any additional setup after loading the view.
 }
